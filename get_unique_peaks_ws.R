@@ -13,6 +13,10 @@ suppressPackageStartupMessages({
 })
 
 # get unique peaks by wigglescout
+# bw: bigwig file
+# bw_backgr: backgroun bigwig file
+# subset: list of regions in bed format
+# thr: fold change threshold. here the fold change is computed by wigglescout (simple fold difference over background bigwig)
 get_unique_ws = function(bw,
                          bw_backgr,
                          subset,

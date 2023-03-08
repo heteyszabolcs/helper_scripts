@@ -10,7 +10,9 @@ suppressPackageStartupMessages({
   library("glue")
 })
 
-
+# this function assigns promoter regions to a list of genes
+# gene argument: gene or gene set
+# mm10 reference
 assign_promoter_region_mm10 = function(gene) {
   # promoter regions
   txdb = TxDb.Mmusculus.UCSC.mm10.knownGene
@@ -41,6 +43,7 @@ assign_promoter_region_mm10 = function(gene) {
   
 }
 
+# hg38 reference
 assign_promoter_region_hg38 = function(gene) {
   # promoter regions
   txdb = TxDb.Hsapiens.UCSC.hg38.knownGene
